@@ -4,7 +4,6 @@ Array.prototype.flatten = function (){
     let arr = this;
     let res = [];
     arr.forEach(item => {
-        debugger;
         if(Array.isArray(item)){
            res.push(...item.flatten());
         } else {
