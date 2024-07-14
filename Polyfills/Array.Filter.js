@@ -1,4 +1,8 @@
 Array.prototype.myFilter = function(callback, context) {
+    if (typeof callback !== 'function') {
+        throw new TypeError(callback + ' is not a function');
+    }
+    
     let arr = this; // 'this' refers to the array on which myFilter is called
     let result = [];
     
